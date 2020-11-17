@@ -4,6 +4,12 @@ body
     // background-color: black
     font-family: $Family
     font-size: $FontSize
+.navbar
+    background: transparent
+    .navbar-menu
+        .navbar-item
+            color: white
+            font-weight: $WeightsBold
 
 .columns
     margin: 0 !important
@@ -77,6 +83,10 @@ body
         right: 0
         bottom: 6px
 @media screen and ( min-width: $Mobile  )
+    .navbar
+        padding: 40px 60px
+        .navbar-brand
+            margin-right: 30px
     .wrapper
         max-width: $Desktop
         margin: 0 auto
