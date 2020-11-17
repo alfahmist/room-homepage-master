@@ -9,7 +9,8 @@ body
     margin: 0 !important
 .images
     height: 100%
-    object-fit: cover
+    width: 100%
+    object-fit: fill
 .judul
     font-weight: $WeightsBold
     color: black
@@ -20,6 +21,24 @@ body
     color: black
     letter-spacing: .76rem
     font-weight: $WeightsBold
+.banner
+    position: relative
+.arrow
+    position: absolute
+    right: 280px
+    bottom: 6px
+
+    .arrow-container
+        display: flex
+        flex-direction: row
+
+        .arrow-left, .arrow-right
+            background-color: black
+            padding: 15px 25px
+
+            img
+                transform: scale(1.2)
+
 @media screen and (max-width: $Mobile)
 
     .navbar
@@ -53,6 +72,17 @@ body
     .container
         margin: 20px
 
+    .arrow
+        position: absolute
+        right: 0
+        bottom: 6px
 @media screen and ( min-width: $Mobile  )
+    .wrapper
+        max-width: $Desktop
+        margin: 0 auto
     .container
         margin: 60px 55px
+    .arrow
+        position: absolute
+        right: -128px
+        bottom: 0

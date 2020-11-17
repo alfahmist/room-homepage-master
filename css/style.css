@@ -9,8 +9,9 @@ body {
 
 .images {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .judul {
@@ -29,7 +30,37 @@ body {
   font-weight: 700;
 }
 
-@media screen and (max-width: 375px) {
+.banner {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  right: 280px;
+  bottom: 6px;
+}
+
+.arrow .arrow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.arrow .arrow-container .arrow-left, .arrow .arrow-container .arrow-right {
+  background-color: black;
+  padding: 15px 25px;
+}
+
+.arrow .arrow-container .arrow-left img, .arrow .arrow-container .arrow-right img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 770px) {
   .navbar {
     position: relative;
   }
@@ -82,11 +113,25 @@ body {
   .container {
     margin: 20px;
   }
+  .arrow {
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+  }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 770px) {
+  .wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   .container {
     margin: 60px 55px;
+  }
+  .arrow {
+    position: absolute;
+    right: -128px;
+    bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
