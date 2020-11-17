@@ -1,0 +1,57 @@
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 770px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar .navbar-brand {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+  }
+  .navbar .navbar-brand .navbar-item {
+    margin-right: auto;
+    margin-left: -40px;
+  }
+  .navbar .navbar-brand .navbar-burger {
+    z-index: 1000;
+    margin-right: auto;
+    margin-left: 0;
+    -webkit-transition: margin .1s;
+    transition: margin .1s;
+  }
+  .navbar .navbar-brand .navbar-burger.is-active {
+    margin-top: 12px;
+  }
+  .navbar .navbar-menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 40px;
+  }
+  .navbar .navbar-menu .navbar-start.mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
