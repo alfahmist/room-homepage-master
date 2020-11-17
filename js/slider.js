@@ -22,7 +22,8 @@ const bgImage = [
 
 let i = 0;
 
-$(".arrow-left").click(function(){
+$(".arrow-left").click(function(e){
+    e.preventDefault;
     i--;
     if(i<0) {
         i=2;
@@ -31,7 +32,8 @@ $(".arrow-left").click(function(){
  
 })
 
-$(".arrow-right").click(function(){
+$(".arrow-right").click(function(e){
+    e.preventDefault;
     i++;
     if(i>judul.length-1) {
         i=0;
@@ -43,9 +45,24 @@ $(".arrow-right").click(function(){
 
 
 function changeSlider(index){
-    $(".img-banner").attr("src","" + bgImage[index]+"");
-    $(".judul-change").html(judul[index]);
-    $(".content-change ").html(content[index]);
+    $(".img-banner")
+    .fadeOut("slow", function() {
+        $(".img-banner").attr("src","" + bgImage[index]+"");
+    })
+    .fadeIn("slow");
+
+    $(".judul-change")
+    .fadeOut("slow", function() {
+        $(".judul-change").html(judul[index]);
+    })
+    .fadeIn("slow");
+
+    $(".content-change")
+    .fadeOut("slow", function() {
+        $(".content-change ").html(content[index]);
+    })
+    .fadeIn("slow");
+
 }
  
 
