@@ -3,6 +3,11 @@ body {
   font-size: 12px;
 }
 
+.judul-change, .judul-content, .img-banner, img {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
 .navbar {
   background: transparent;
 }
