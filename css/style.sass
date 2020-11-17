@@ -5,8 +5,23 @@ body
     font-family: $Family
     font-size: $FontSize
 
-@media screen and ( max-width: $Mobile  )
-// Navbar
+.columns
+    margin: 0 !important
+.images
+    height: 100%
+    object-fit: cover
+.judul
+    font-weight: $WeightsBold
+    color: black
+.content
+    color: $VeryDarkGray
+    line-height: 1.33rem
+.shop
+    color: black
+    letter-spacing: .76rem
+    font-weight: $WeightsBold
+@media screen and (max-width: $Mobile)
+
     .navbar
         position: relative
         .navbar-brand
@@ -35,3 +50,9 @@ body
                     justify-content: space-around
                     height: 60px
                     align-items: center
+    .container
+        margin: 20px
+
+@media screen and ( min-width: $Mobile  )
+    .container
+        margin: 60px 55px
